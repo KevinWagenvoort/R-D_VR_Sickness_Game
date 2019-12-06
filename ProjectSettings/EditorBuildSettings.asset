@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 4097d825b367a4bed87aaa05f04e173c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Framerate.unity
     guid: 4b6b7a08d7cd5c64a870f3fe1cf0aab6
+  - enabled: 1
+    path: Assets/Scenes/Large Room.unity
+    guid: 2ca1eadb9052f124db5b8234821d3626
   m_configObjects: {}
