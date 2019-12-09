@@ -6,7 +6,7 @@ using UnityEngine;
 public class FollowPath : MonoBehaviour
 {
 
-    public GameObject camera;
+    public GameObject gameObject;
     public float speed;
     public PathCreator pathCreator;
     private float distanceTraveled;
@@ -21,9 +21,21 @@ public class FollowPath : MonoBehaviour
     void Update()
     {
         distanceTraveled += speed * Time.deltaTime;
-        camera.transform.position = pathCreator.path.GetPointAtDistance(distanceTraveled);
+        //gameObject.transform.position = pathCreator.path.GetPointAtDistance(distanceTraveled);
+        gameObject.GetComponent<Rigidbody>().velocity = pathCreator.path.GetPointAtDistance(distanceTraveled).normalized * speed;
 
-        camera.transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTraveled);
-        camera.transform.Rotate(new Vector3(0, -90, 0));
+        gameObject.transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTraveled);
+        Debug.Log(pathCreator.path.GetRotationAtDistance(distanceTraveled));
+    }
+
+    public void ResetPath(bool collision, GameObject game)
+    {
+        if (collision)
+        {
+            distanceTraveled = 0;
+            speed++;
+
+            gameObject.transform.position = new Vector3(0, 0.211f, 0);
+        }
     }
 }
