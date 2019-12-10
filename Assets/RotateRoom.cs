@@ -10,6 +10,6 @@ public class RotateRoom : MonoBehaviour
     void Update()
     {
         Vector3 RandomRotate = new Vector3(Random.Range(0, RotateAmountMax.x), Random.Range(0, RotateAmountMax.y), Random.Range(0, RotateAmountMax.z));
-        transform.Rotate(RandomRotate * Time.deltaTime);x
+        transform.Rotate(RandomRotate * Time.deltaTime);
     }
 }

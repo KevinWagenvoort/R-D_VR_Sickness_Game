@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ColliderScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Collider c1, c2;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        c1 = collision.collider;
+        Debug.Log("Applause!");
+        AudioSource source = GetComponent<AudioSource>();
+        source.Play();
+        Collider collider = GetComponent<BoxCollider>();
+        c2 = collider;
+        Physics.IgnoreCollision(c1, c2, true);
+        Invoke("EnableAfter", 5);
     }
 
-    // Update is called once per frame
-    void Update()
+    void EnableAfter()
     {
-        
+        Physics.IgnoreCollision(c1, c2, false);
     }
 }
