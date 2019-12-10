@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Obstacle avoidence.unity
     guid: 12be46ec81be1564ab51694c962c2f66
+  - enabled: 0
+    path: Assets/Scenes/Basketball.unity
+    guid: 4b5c456227c22c14da341ca98a982e04
   m_configObjects: {}

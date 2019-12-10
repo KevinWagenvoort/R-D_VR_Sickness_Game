@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c8e964995cee27c4fbd6006c62c76299
+timeCreated: 1519421178
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: RobinGraffitiFilledin
+  fontNames:
+  - RobinGraffitiFilledin
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
