@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class TagDetectionController : MonoBehaviour
 {
+    public AudioSource source;
+
     [Serializable]
     public class CallbackFunction : UnityEvent<bool, GameObject> { }
 
@@ -16,10 +18,12 @@ public class TagDetectionController : MonoBehaviour
     // Called when the trigger is colliding
     void OnTriggerEnter(Collider collision)
     {
+       
         // Check if the collision is on the right layer
         if (Detection(collision.gameObject))
         {
             callbackFunction.Invoke(true, collision.gameObject);
+            source.Play();
         }
     }
 
@@ -36,10 +40,12 @@ public class TagDetectionController : MonoBehaviour
     // Called when the trigger is colliding
     void OnCollisionEnter(Collision collision)
     {
+
         // Check if the collision is on the right layer
         if (Detection(collision.gameObject))
         {
             callbackFunction.Invoke(true, collision.gameObject);
+            source.Play();
         }
     }
 
